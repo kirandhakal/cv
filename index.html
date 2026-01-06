@@ -1,102 +1,176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kiran Dhakal — Frontend Developer</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Dhakal - Frontend Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #333;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 4px;
+            color: #2c3e50;
+        }
+        h2 {
+            font-size: 16px;
+            margin: 12px 0 8px 0;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 4px;
+        }
+        .contact-info {
+            margin-bottom: 16px;
+        }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 16px;
+        }
+        .section {
+            margin-bottom: 16px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .project-item {
+            margin-bottom: 10px;
+        }
+        .project-item strong {
+            font-size: 13px;
+        }
+        .project-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 11px;
+        }
+        .project-item p {
+            margin-top: 2px;
+            margin-left: 0;
+        }
+        .education-item strong {
+            display: block;
+        }
+        .project-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 12px;
+        }
+        ul {
+            list-style-position: inside;
+            margin-left: 16px;
+        }
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .skills-list {
+            margin-bottom: 4px;
+        }
+    </style>
 </head>
 <body>
-  <div class="resume">
-    <aside class="sidebar">
-      <div class="photo-placeholder" aria-hidden="true">KD</div>
-      <h2 class="name">Kiran Dhakal</h2>
-      <p class="role">Frontend Developer</p>
+    <header>
+        <h1>KIRAN DHAKAL</h1>
+        <div class="subtitle">Web Developer</div>
+        <div class="contact-info">
+            Pokhara, Kaski | 
+            <a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a> |
+            <a href="https://dhakalkiran.com.np" target="_blank">https://dhakalkiran.com.np</a> |
+            <a href="https://www.linkedin.com/in/kirandhakal7" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/kirandhakal" target="_blank">GitHub</a>
+        </div>
+    </header>
 
-      <div class="contact">
-        <h3>Contact</h3>
-        <ul>
-          <li>Pokhara, Kaski</li>
-          <li><a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a></li>
-          <li><a href="https://dhakalkiran.com.np" target="_blank" rel="noopener">Portfolio</a></li>
-          <li><a href="https://www.linkedin.com/in/kirandhakal7" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/kirandhakal" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-
-      <div class="skills">
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>React.js · HTML5 · CSS3 · JS (ES6+)</li>
-          <li>Figma · Responsive Design</li>
-          <li>Flutter · Git · Node.js · PHP</li>
-        </ul>
-      </div>
-
-      <div class="languages">
-        <h3>Languages</h3>
-        <ul>
-          <li>English (Professional)</li>
-          <li>Nepali (Native)</li>
-          <li>Hindi (Proficient)</li>
-        </ul>
-      </div>
-
-      <div class="interests">
-        <h3>Interests</h3>
-        <p>Chess · Table Tennis · Software trends · Tech communities</p>
-      </div>
-    </aside>
-
-    <main class="main">
-      <section class="summary">
-        <h1>Professional Summary</h1>
+    <section class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
         <p>Aspiring frontend developer with strong foundations in modern web technologies and a passion for creating engaging user interfaces. Skilled in React, HTML, CSS, and JavaScript, with hands-on experience in responsive design and UI/UX principles through academic projects.</p>
-      </section>
+    </section>
 
-      <section class="education">
-        <h2>Education</h2>
-        <div class="edu-item">
-          <h4>Computer Engineering</h4>
-          <p>Gandaki College of Engineering and Science, Lamachaur, Pokhara — <span class="date">Nov 2020 - Present</span></p>
+    <section class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skills-list"><strong>Frontend:</strong> React.js, HTML5, CSS3, JavaScript (ES6+)</div>
+            <div class="skills-list"><strong>UI/UX:</strong> Figma, Responsive Design, Cross-browser Compatibility</div>
+            <div class="skills-list"><strong>Mobile Development:</strong> Flutter</div>
+            <div class="skills-list"><strong>Version Control:</strong> Git</div>
+            <div class="skills-list"><strong>Development Tools:</strong> Android Studio, VS Code, Docker, Linux</div>
+            <div class="skills-list"><strong>Additional Skills:</strong> PHP, Node.js, Python, Basic Deployment Integration</div>
         </div>
-        <div class="edu-item">
-          <h4>Secondary Education</h4>
-          <p>Shree Shiva Secondary School, Kawasoti, Nawalpur — <span class="date">Apr 2013 - Apr 2020</span></p>
+    </section>
+
+    <section class="section">
+        <h2>EDUCATION</h2>
+        <div class="education-item">
+            <strong>Computer Engineering</strong>
+            Gandaki College of Engineering and Science, Lamachaur, Pokhara
+            <div>November 2020 - Present</div>
         </div>
-      </section>
+        <div class="education-item">
+            <strong>Secondary Education</strong>
+            Shree Shiva Secondary School, Kawasoti, Nawalpur
+            <div>April 2013 - April 2020</div>
+        </div>
+    </section>
 
-      <section class="projects">
-        <h2>Projects</h2>
-        <ul class="project-list">
-          <li>
-            <h4>Blood Bank Management System</h4>
-            <p>PHP / MySQL — College project for managing donors, stock, and requests.</p>
-            <p class="meta"><a href="https://github.com/kirandhakal/bloodbankmanagementsystem" target="_blank" rel="noopener">GitHub</a></p>
-          </li>
-          <li>
-            <h4>Online Code Editor</h4>
-            <p>Node.js / MongoDB — Web-based code editor (Minor II project).</p>
-            <p class="meta"><a href="https://github.com/kirandhakal/codeeditor" target="_blank" rel="noopener">GitHub</a></p>
-          </li>
-          <li>
-            <h4>Expenses Tracker</h4>
-            <p>JavaScript / Frontend app for tracking monthly expenses.</p>
-            <p class="meta"><a href="https://github.com/kirandhakal/expense-tracker" target="_blank" rel="noopener">GitHub</a></p>
-          </li>
-          <li>
-            <h4>Weather App</h4>
-            <p>Frontend project consuming weather APIs to show current forecasts.</p>
-            <p class="meta"><a href="https://github.com/kirandhakal/wheather-app" target="_blank" rel="noopener">GitHub</a></p>
-          </li>
-        </ul>
-      </section>
+    <section class="section">
+        <h2>PROJECTS</h2>
+        
+        <div class="project-item">
+            <div><strong>Blood Bank Management System</strong> <a href="https://github.com/kirandhakal/bloodbankmanagementsystem" target="_blank">View on GitHub</a></div>
+            <p>A simple system for managing blood bank donations, inventory, and requests. It includes features for user registration, donation tracking, and request management.</p>
+        </div>
 
-      <section class="extra">
-        <h2>Additional</h2>
-        <p>Development Tools: Android Studio, VS Code. Basic backend integration experience. Active in coding communities.</p>
-      </section>
-    </main>
-  </div>
+        <div class="project-item">
+            <div><strong>Kanban</strong> <a href="https://github.com/kirandhakal/kanban" target="_blank">View on GitHub</a></div>
+            <p>It helps users organize tasks in a board with To Do, In Progress, and Done columns. Users can add, edit, and move tasks to track progress, enhancing productivity.</p>
+        </div>
+
+        <div class="project-item">
+            <div><strong>Code Editor</strong> <a href="https://github.com/kirandhakal/codeeditor" target="_blank">View on GitHub</a></div>
+            <p>CodeEditor is an online coding platform built with Node.js and MongoDB, allowing users to write, run, and save code in the browser with a smooth, real-time experience.</p>
+        </div>
+
+        <div class="project-item">
+            <div><strong>Weather App</strong> <a href="https://github.com/kirandhakal/wheather-app" target="_blank">View on GitHub</a></div>
+            <p>A weather forecasting app that provides real-time weather data for any city, integrated with an external API to fetch current weather details, temperature, and forecasts.</p>
+        </div>
+
+        <div class="project-item">
+            <div><strong>Expense Tracker</strong> <a href="https://github.com/kirandhakal/expense-tracker" target="_blank">View on GitHub</a></div>
+            <p>An application to track personal expenses and categorize them. Users can add, edit, and delete transactions, helping them stay on top of their budgeting.</p>
+        </div>
+
+        <div class="project-item">
+            <div><strong>Web Scrap Bot</strong> <a href="https://github.com/kirandhakal/webscrapbot" target="_blank">View on GitHub</a></div>
+            <p>An automated web scraping application that monitors multiple websites for specific content, extracts relevant documents, and sends real-time notifications via Telegram Bots.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>LANGUAGES</h2>
+        English (Professional Working Proficiency) • Nepali (Native Proficiency) • Hindi (Professional Working Proficiency)
+    </section>
+
+    <section class="section">
+        <h2>INTERESTS & ACTIVITIES</h2>
+        Active participation in coding communities and tech forums • Passionate about chess and strategic gaming • Sports enthusiast (Table Tennis, Cricket, Football) • Keen interest in software development and emerging technologies
+    </section>
 </body>
 </html>
