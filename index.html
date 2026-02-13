@@ -8,11 +8,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
         :root {
-            --primary-color: #0f172a;    /* Deep Navy */
-            --accent-color: #2563eb;     /* Modern Blue */
+            --primary-black: #000000;    /* Solid Black for Titles */
+            --accent-blue: #2563eb;      /* Professional Blue */
             --text-main: #334155;        /* Soft Charcoal */
-            --text-heading: #1e293b;     /* Darker Slate */
-            --line-color: #e2e8f0;       /* Light Gray */
+            --text-heading: #0f172a;     /* Dark Slate */
+            --line-color: #cbd5e1;       /* Refined Gray */
         }
 
         * {
@@ -23,9 +23,9 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            background-color: #f1f5f9;
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.5;
             padding: 40px 0;
         }
 
@@ -34,30 +34,30 @@
             margin: 0 auto;
             background: #fff;
             padding: 50px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
         }
 
         header {
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 3px solid var(--primary-black);
             padding-bottom: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 34px;
             font-weight: 700;
-            color: var(--text-heading);
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
+            color: var(--primary-black);
+            letter-spacing: -0.03em;
+            margin-bottom: 5px;
         }
 
         .subtitle {
-            font-size: 18px;
-            color: var(--accent-color);
+            font-size: 16px;
+            color: var(--accent-blue);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             margin-bottom: 15px;
         }
 
@@ -65,26 +65,28 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-main);
         }
 
         .contact-info a {
             color: var(--text-main);
             text-decoration: none;
-            transition: color 0.2s;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
         }
 
         .contact-info a:hover {
-            color: var(--accent-color);
+            color: var(--accent-blue);
+            border-bottom: 1px solid var(--accent-blue);
         }
 
         h2 {
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent-color);
+            letter-spacing: 0.12em;
+            color: var(--primary-black);
             margin: 30px 0 15px 0;
             display: flex;
             align-items: center;
@@ -93,50 +95,37 @@
         h2::after {
             content: "";
             flex: 1;
-            height: 1px;
-            background: var(--line-color);
+            height: 2px;
+            background: var(--primary-black);
             margin-left: 15px;
         }
 
-        p {
-            font-size: 15px; /* Increased size as requested */
-            margin-bottom: 12px;
-            color: var(--text-main);
+        .experience-item, .project-item {
+            margin-bottom: 22px;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            font-size: 15px;
-        }
-
-        .skill-category {
-            font-weight: 600;
-            color: var(--text-heading);
-        }
-
-        .experience-item {
-            margin-bottom: 25px;
-        }
-
-        .exp-header {
+        .exp-header, .proj-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
-        .job-title {
-            font-size: 17px;
+        .job-title, .project-title {
+            font-size: 16px;
             font-weight: 700;
             color: var(--text-heading);
         }
 
-        .exp-date {
-            font-size: 13px;
-            font-weight: 600;
-            color: #94a3b8;
+        .exp-date, .proj-link {
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+        }
+
+        .proj-link a {
+            color: var(--accent-blue);
+            text-decoration: none;
         }
 
         ul {
@@ -145,23 +134,31 @@
         }
 
         li {
-            font-size: 15px;
-            margin-bottom: 10px;
+            font-size: 14.5px;
+            margin-bottom: 8px;
             position: relative;
             padding-left: 20px;
+            text-align: justify;
         }
 
         li::before {
-            content: "→";
+            content: "•";
             position: absolute;
             left: 0;
-            color: var(--accent-color);
+            color: var(--accent-blue);
             font-weight: bold;
         }
 
         .bold-text {
             font-weight: 600;
-            color: var(--text-heading);
+            color: var(--primary-black);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 14px;
         }
 
         @media print {
@@ -175,87 +172,154 @@
 <div class="cv-container">
     <header>
         <h1>Kiran Dhakal</h1>
-        <div class="subtitle">Frontend / Full-Stack Developer</div>
+        <div class="subtitle">Full-Stack Developer</div>
         <div class="contact-info">
             <span>Kathmandu, Nepal</span>
             <a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a>
             <a href="https://dhakalkiran.com.np">dhakalkiran.com.np</a>
-            <a href="https://linkedin.com/in/kirandhakal7">https://linkedin.com/in/kirandhakal7</a>
-            <a href="https://github.com/kirandhakal">https://github.com/kirandhakal</a>
+            <a href="https://linkedin.com/in/kirandhakal7">linkedin.com/in/kirandhakal7</a>
         </div>
     </header>
+<section>
 
-    <section>
         <h2>Professional Summary</h2>
+
         <p>
+
             Results-driven Web Developer with specialized foundations in React.js and Node.js. 
+
             Proven track record during professional internships of optimizing system performance and 
+
             translating complex Figma designs into interactive, user-centric interfaces. 
+
             Expertise lies in creating automated workflows and scalable data systems for international education and eCommerce platforms.
+
         </p>
+
     </section>
+
+
 
     <section>
-        <h2>Core Expertise</h2>
-        <div class="skills-grid">
-            <div><span class="skill-category">Languages:</span> JavaScript, TypeScript, PHP, Python</div>
-            <div><span class="skill-category">Frontend:</span> React.js, Next.js, Tailwind CSS, HTML5, CSS3</div>
-            <div><span class="skill-category">Backend:</span> Node.js, GraphQL, REST APIs, MySQL, PostgreSQL , react query</div>
-            <div><span class="skill-category">Tools:</span> Git, Docker, Linux, Figma, VS Code</div>
-        </div>
-    </section>
 
+        <h2>Core Expertise</h2>
+
+        <div class="skills-grid">
+
+            <div><span class="skill-category">Languages:</span> JavaScript, TypeScript, PHP, Python</div>
+
+            <div><span class="skill-category">Frontend:</span> React.js, Next.js, Tailwind CSS</div>
+
+            <div><span class="skill-category">Backend:</span> Node.js, GraphQL, REST APIs, MySQL, PostgreSQL , react query</div>
+
+            <div><span class="skill-category">Tools:</span> Git, Docker, DigitalOcean,n8n Figma, VS Code</div>
+
+        </div>
+
+    </section>
     <section>
         <h2>Professional Experience</h2>
         
         <div class="experience-item">
             <div class="exp-header">
-                <span class="job-title">Software Engineering Intern</span>
-                <span class="exp-date">NOV 2025 – DEC 2025</span>
+                <span class="job-title">Software Engineer</span>
+                <span class="exp-date">NOV 2025 – PRESENT</span>
             </div>
             <ul>
-                <li>
-                    <span class="bold-text">Chuiurika eCommerce Platform:</span> Reconstructed the user interface from Figma designs, resolving over 12 critical backend bugs and optimizing GraphQL APIs to achieve a 25% increase in data retrieval speed.
-                </li>
-                <li>
-                    <span class="bold-text">School Management Systems (CTF):</span> Architected a modular evaluation template that automated the generation of performance reports for over 500+ students across annual and class-wise categories.
-                </li>
-                <li>
-                    <span class="bold-text">Vibe Dynamic Form Builder:</span> Developed a Dynamic form for an International College that converted form submissions directly into student records, eliminating 80% of manual data entry tasks.
-                </li>
-                <li>
-                    <span class="bold-text">GIS Municipal Research:</span> Engineered spatial data models for municipal planning, facilitating more accurate geographic visualization and data-driven decision-making for local government.
-                </li>
-                <!-- <li>
-                    <span class="bold-text">Technical Tooling:</span> Independently developed a high-performance MERN-stack Code Editor and a Python-based Web Scraping bot that automated content monitoring with real-time Telegram alerts.
-                </li> -->
+               
+                    <span class="bold-text">Hello Palika (Municipal SaaS):</span> Engineered a comprehensive "Local Government-to-Citizen" platform. Built tools for real-time publishing of municipal news and notices, and an executive dashboard for Mayors and CAOs to manage official activities. The system serves as a central hub for legislative acts and digitizes previously manual paper-based filing systems.
+              
+                    <span class="bold-text">Chuiurika eCommerce Platform:</span> Led the frontend reconstruction using React and Tailwind CSS to match high-fidelity Figma designs. Spearheaded a massive debugging phase that resolved over a dozen critical backend bottlenecks and refactored GraphQL queries to achieve a substantial increase in data retrieval speed and UI responsiveness.
+               
+               
+                    <span class="bold-text">School Management Systems (CTF):</span> Developed an automated academic evaluation engine. This system allows schools to generate multi-dimensional student performance reports (annual/term-wise) instantly, significantly reducing the administrative workload for educators.
+              
+                    <span class="bold-text">Vibe Dynamic Form Builder:</span> Created a low-code form solution for educational institutions. It features a drag-and-drop interface that maps form submissions directly to internal database schemas, automating the student enrollment and data entry pipeline.
+              
             </ul>
         </div>
     </section>
 
     <section>
-        <h2>Education</h2>
-        <div class="experience-item">
-            <div class="exp-header">
-                <span class="job-title">Bachelor in Computer Engineering</span>
-                <span class="exp-date">2020 – PRESENT</span>
+        <h2>Relevant Projects</h2>
+        
+        <div class="project-item">
+            <div class="proj-header">
+                <span class="project-title">Redpanda Hotel (eCommerce)</span>
+                <span class="proj-link"><a href="#">View Project</a></span>
             </div>
-            <p>Gandaki College of Engineering and Science, Lamachaur, Pokhara</p>
+         Developed a specialized hospitality platform focusing on seamless room reservations and inventory management. Integrated a custom checkout flow designed for the local market and optimized for mobile performance.
         </div>
-        <div class="experience-item">
-            <div class="exp-header">
-                <span class="job-title">Secondary Education</span>
-                <span class="exp-date">2013 – 2020</span>
+
+        <div class="project-item">
+            <div class="proj-header">
+                <span class="project-title">Dynamic CV Maker</span>
+                <span class="proj-link"><a href="#">View Project</a></span>
             </div>
-            <p>Shree Shiva Secondary School, Kawasoti, Nawalpur</p>
+            A utility application designed to help job seekers generate ATS-friendly resumes. Built with a focus on real-time data persistence and dynamic styling using React State Management.
+        </div>
+
+        <div class="project-item">
+            <div class="proj-header">
+                <span class="project-title">Project Management Software</span>
+                <span class="proj-link"><a href="#">View Project</a></span>
+            </div>
+          Designed a collaborative SaaS tool for dev teams to track sprints and issues. Implemented role-based access control (RBAC) and real-time status updates to facilitate agile workflows.
+        </div>
+
+        <div class="project-item">
+            <div class="proj-header">
+                <span class="project-title">Smart eCommerce with Recommendation System</span>
+            </div>
+           Built an intelligent shopping platform that utilizes collaborative filtering algorithms. The system analyzes user interaction patterns to provide personalized product suggestions, enhancing user engagement and conversion rates.
         </div>
     </section>
 
-    <section>
-        <h2>Additional</h2>
-        <p><span class="bold-text">Languages:</span> English (Professional), Nepali (Native), Hindi (Professional)</p>
-        <p><span class="bold-text">Interests:</span> Strategic Chess, Table Tennis, Open Source Development, Emerging Web Technologies.</p>
+   
+
+  <section>
+
+        <h2>Education</h2>
+
+        <div class="experience-item">
+
+            <div class="exp-header">
+
+                <span class="job-title">Bachelor in Computer Engineering</span>
+
+                <span class="exp-date">2020 –2025</span>
+
+            </div>
+
+            <p>Gandaki College of Engineering and Science, Lamachaur, Pokhara</p>
+
+        </div>
+
+        <div class="experience-item">
+
+            <div class="exp-header">
+
+                <span class="job-title">Secondary Education</span>
+
+                <span class="exp-date">2013 – 2020</span>
+
+            </div>
+
+            <p>Shree Shiva Secondary School, Kawasoti, Nawalpur</p>
+
+        </div>
+
     </section>
+<section>
+<h2>Additional</h2>
+
+        <p><span class="bold-text">Languages:</span> English (Professional), Nepali (Native), Hindi (Professional)</p>
+
+        <p><span class="bold-text">Interests:</span> Strategic Chess, Table Tennis, Open Source Development, Emerging Web Technologies.</p>
+
+    </section>
+
+</div>
 </div>
 
 </body>
