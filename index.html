@@ -1,329 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Dhakal - Web Developer</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kiran Dhakal — Full-Stack Developer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
-        :root {
-            --primary-black: #000000;    /* Solid Black for Titles */
-            --accent-blue: #2563eb;      /* Professional Blue */
-            --text-main: #334155;        /* Soft Charcoal */
-            --text-heading: #0f172a;     /* Dark Slate */
-            --line-color: #cbd5e1;       /* Refined Gray */
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #1a1a1a;
+      color: #1a1a1a;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f1f5f9;
-            color: var(--text-main);
-            line-height: 1.5;
-            padding: 20px 0;
-        }
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 56px 64px;
+    }
 
-        .cv-container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
-        }
+    /* HEADER */
+    .header {
+      border-bottom: 3px solid #000;
+      padding-bottom: 22px;
+      margin-bottom: 28px;
+    }
 
-        header {
-            border-bottom: 3px solid var(--primary-black);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
+    .header h1 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 46px;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
 
-        h1 {
-            font-size: 34px;
-            font-weight: 700;
-            color: var(--primary-black);
-            letter-spacing: -0.03em;
-            margin-bottom: 5px;
-        }
+    .header .role {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 16px;
+    }
 
-        .subtitle {
-            font-size: 16px;
-            color: var(--accent-blue);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 15px;
-        }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #333;
+    }
 
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 13px;
-            color: var(--text-main);
-        }
+    .contact-row span {
+      padding-right: 16px;
+      margin-right: 16px;
+      border-right: 1px solid #bbb;
+    }
 
-        .contact-info a {
-            color: var(--text-main);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: all 0.2s;
-        }
+    .contact-row span:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
 
-        .contact-info a:hover {
-            color: var(--accent-blue);
-            border-bottom: 1px solid var(--accent-blue);
-        }
+    .contact-row a { color: #333; text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; }
 
-        h2 {
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--primary-black);
-            margin: 30px 0 15px 0;
-            display: flex;
-            align-items: center;
-        }
+    /* SECTION */
+    .section { margin-bottom: 26px; }
 
-        h2::after {
-            content: "";
-            flex: 1;
-            height: 2px;
-            background: var(--primary-black);
-            margin-left: 15px;
-        }
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #000;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        .experience-item, .project-item {
-            margin-bottom: 22px;
-        }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #000;
+    }
 
-        .exp-header, .proj-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 6px;
-        }
+    /* SUMMARY */
+    .summary p {
+      font-size: 14.5px;
+      color: #2c2c2c;
+      line-height: 1.75;
+    }
 
-        .job-title, .project-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-heading);
-        }
+    /* SKILLS */
+    .skills-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 32px;
+    }
 
-        .exp-date, .proj-link {
-            font-size: 12px;
-            font-weight: 700;
-            color: #64748b;
-        }
+    .skill-line {
+      font-size: 13.5px;
+      color: #1a1a1a;
+      line-height: 1.55;
+    }
 
-        .proj-link a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
+    .skill-label { font-weight: 600; color: #000; }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    /* EXPERIENCE */
+    .exp-item { margin-bottom: 22px; }
 
-        li {
-            font-size: 14.5px;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-            text-align: justify;
-        }
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
 
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-            font-weight: bold;
-        }
+    .exp-title {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #000;
+    }
 
-        .bold-text {
-            font-weight: 600;
-            color: var(--primary-black);
-        }
+    .exp-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      white-space: nowrap;
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            font-size: 14px;
-            color: var(--primary-black);
-        }
+    .exp-company {
+      font-size: 13px;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 9px;
+    }
 
-        @media print {
-            body { background: none; padding: 0; }
-            .cv-container { box-shadow: none; border-radius: 0; width: 100%; padding: 0; }
-        }
-    </style>
+    .bullets { list-style: none; }
+
+    .bullets li {
+      font-size: 13.5px;
+      color: #2c2c2c;
+      padding-left: 18px;
+      margin-bottom: 7px;
+      position: relative;
+      line-height: 1.68;
+    }
+
+    .bullets li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #888;
+      font-size: 12px;
+      top: 1px;
+    }
+
+    strong { font-weight: 600; color: #000; }
+
+    /* PROJECTS */
+    .project-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 20px;
+      margin-bottom: 13px;
+      align-items: start;
+    }
+
+    .proj-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .proj-link {
+      font-size: 11.5px;
+      color: #555;
+      text-decoration: none;
+      font-weight: 500;
+      white-space: nowrap;
+      padding-top: 2px;
+      font-style: italic;
+    }
+
+    .proj-link:hover { text-decoration: underline; }
+
+    .proj-desc {
+      font-size: 13.5px;
+      color: #2c2c2c;
+      line-height: 1.65;
+      grid-column: 1 / -1;
+    }
+
+    /* EDUCATION */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .edu-left .edu-degree {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .edu-left .edu-school {
+      font-size: 13px;
+      color: #555;
+      font-style: italic;
+      margin-top: 1px;
+    }
+
+    .edu-date {
+      font-size: 12px;
+      color: #666;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* ADDITIONAL */
+    .add-line {
+      font-size: 13.5px;
+      color: #2c2c2c;
+      margin-bottom: 5px;
+      line-height: 1.6;
+    }
+
+    @media print {
+      body { background: none; padding: 0; }
+      .page { padding: 40px 48px; }
+    }
+  </style>
 </head>
 <body>
+<div class="page">
 
-<div class="cv-container">
-    <header>
-        <h1>Kiran Dhakal</h1>
-        <div class="subtitle">Full-Stack Developer</div>
-        <div class="contact-info">
-            <span>Kathmandu, Nepal</span>
-            <a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a>
-            <a href="https://dhakalkiran.com.np">dhakalkiran.com.np</a>
-            <a href="https://linkedin.com/in/kirandhakal7">linkedin.com/in/kirandhakal7</a>
-        </div>
-    </header>
-<section>
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Kiran Dhakal</h1>
+    <div class="role">Full-Stack Developer</div>
+    <div class="contact-row">
+      <span>Kathmandu, Nepal</span>
+      <span><a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a></span>
+      <span><a href="https://dhakalkiran.com.np">dhakalkiran.com.np</a></span>
+      <span><a href="https://linkedin.com/in/kirandhakal7">linkedin.com/in/kirandhakal7</a></span>
+    </div>
+  </div>
 
-        <h2>Professional Summary</h2>
+  <!-- SUMMARY -->
+  <div class="section summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Full-Stack Developer with proven experience building government platforms, college workflow systems, and eCommerce applications using React.js and Node.js. Skilled at turning Figma designs into fast, clean interfaces and at solving complex backend performance problems. Delivered real products used by schools, colleges, municipalities, and businesses across Nepal.
+    </p>
+  </div>
 
-        <p>
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-block">
+      <div class="skill-line"><span class="skill-label">Languages &nbsp;&nbsp;&nbsp;</span> JavaScript, TypeScript, PHP, Python</div>
+      <div class="skill-line"><span class="skill-label">Frontend &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> React.js, Next.js, Tailwind CSS</div>
+      <div class="skill-line"><span class="skill-label">Backend &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Node.js, GraphQL, REST APIs, MySQL, PostgreSQL, React Query</div>
+      <div class="skill-line"><span class="skill-label">Tools &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Git, Docker, DigitalOcean, n8n, Figma, Google Cloud, Google Colab</div>
+    </div>
+  </div>
 
-            Results-driven Web Developer with specialized foundations in React.js and Node.js. 
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
 
-            Proven track record during professional internships of optimizing system performance and 
+    <div class="exp-item">
+      <div class="exp-top">
+        <span class="exp-title">Software Engineer</span>
+        <span class="exp-date">Nov 2025 — Present</span>
+      </div>
+      <div class="exp-company">Full-Time · Kathmandu, Nepal</div>
+      <ul class="bullets">
 
-            translating complex Figma designs into interactive, user-centric interfaces. 
+        <li>
+          <strong>Hello Palika — Government Citizen Platform:</strong> Built a web platform for local governments to publish news, notices, and events for citizens. Designed an executive dashboard for Mayors, Deputy Mayors, and Chief Administrative Officers to manage official activities. Citizens can submit complaints and feedback directly through the platform, fully replacing paper-based systems.
+        </li>
 
-            Expertise lies in creating automated workflows and scalable data systems for international education and eCommerce platforms.
+        <li>
+          <strong>Chuiurika — eCommerce Platform:</strong> Rebuilt the entire frontend using React.js and Tailwind CSS based on Figma designs. Resolved over 12 critical backend bugs and rewrote GraphQL queries, resulting in a significant improvement in data retrieval speed and overall page responsiveness.
+        </li>
 
-        </p>
+        <li>
+          <strong>School Management System — Career Training Foundation Nepal (CTF):</strong> Developed an automated academic report engine that allows schools to instantly generate detailed student performance reports for each term and full year, reducing manual workload for teaching staff.
+        </li>
 
-    </section>
+        <li>
+          <strong>Vibe Dynamic Form Builder — College Workflow Automation:</strong> Built a drag-and-drop form tool for colleges where submitted forms move through defined approval levels step by step. Once a form completes all stages, the system automatically generates and sends an offer letter to the student, eliminating manual paperwork entirely.
+        </li>
 
+        <li>
+          <strong>Infocare Nepal — Website Redesign:</strong> Redesigned and rebuilt the Infocare Nepal website (infocarenepal.com) using Next.js, delivering a modern, fast, and fully mobile-responsive interface with a significantly improved user experience.
+        </li>
 
+      </ul>
+    </div>
+  </div>
 
-    <section>
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Selected Projects</div>
 
-        <h2>Core Expertise</h2>
+    <div class="project-item">
+      <span class="proj-title">Redpanda Hotel and Lodge</span>
+      <a class="proj-link" href="https://pandanest.vercel.app/">pandanest.vercel.app</a>
+      <p class="proj-desc">Hotel booking platform with room inventory management and a custom checkout flow built for the local Nepal market. Optimized for mobile performance.</p>
+    </div>
 
-        <div class="skills-grid">
+    <div class="project-item">
+      <span class="proj-title">Dynamic CV Maker</span>
+      <a class="proj-link" href="https://cv.dhakalkiran.com.np/">cv.dhakalkiran.com.np</a>
+      <p class="proj-desc">A resume builder that helps job seekers create ATS-friendly CVs in real time. Built with React state management for live editing and dynamic styling.</p>
+    </div>
 
-            <div><span class="skill-category">Languages:</span> JavaScript, TypeScript, PHP, Python</div>
+    <div class="project-item">
+      <span class="proj-title">Project Management Software</span>
+      <a class="proj-link" href="https://pms.dhakalkiran.com.np/">pms.dhakalkiran.com.np</a>
+      <p class="proj-desc">A SaaS tool for development teams to track tasks, issues, and sprints. Features role-based access control (RBAC) and real-time status updates. <em>(In Progress)</em></p>
+    </div>
 
-            <div><span class="skill-category">Frontend:</span> React.js, Next.js, Tailwind CSS</div>
+    <div class="project-item">
+      <span class="proj-title">Food Delivery Platform</span>
+      <a class="proj-link" href="https://fooddelivery-ten-ebon.vercel.app/">fooddelivery-ten-ebon.vercel.app</a>
+      <p class="proj-desc">Online food ordering platform with smart product recommendations based on user interaction patterns to improve engagement and conversion.</p>
+    </div>
 
-            <div><span class="skill-category">Backend:</span> Node.js, GraphQL, REST APIs, MySQL, PostgreSQL , react query</div>
+  </div>
 
-            <div><span class="skill-category">Tools:</span> Git, Docker, DigitalOcean,n8n Figma, Google Colab , Google cloud</div>
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
 
-        </div>
+    <div class="edu-item">
+      <div class="edu-left">
+        <div class="edu-degree">Bachelor of Computer Engineering</div>
+        <div class="edu-school">Gandaki College of Engineering and Science, Pokhara</div>
+      </div>
+      <span class="edu-date">2020 — 2025</span>
+    </div>
 
-    </section>
-    <section>
-        <h2>Professional Experience</h2>
-        
-        <div class="experience-item">
-            <div class="exp-header">
-                <span class="job-title">Software Engineer</span>
-                <span class="exp-date">NOV 2025 – PRESENT</span>
-            </div>
-            <ul>
-               
-                    <span class="bold-text">Hello Palika (Municipal SaaS):</span> Engineered a comprehensive "Local Government-to-Citizen" platform. Built tools for real-time publishing of municipal news and notices, and an executive dashboard for Mayors and CAOs to manage official activities. The system serves as a central hub for legislative acts and digitizes previously manual paper-based filing systems.<br><br>
-              
-                    <span class="bold-text">Chuiurika eCommerce Platform:</span> Led the frontend reconstruction using React and Tailwind CSS to match high-fidelity Figma designs. Spearheaded a massive debugging phase that resolved over a dozen critical backend bottlenecks and refactored GraphQL queries to achieve a substantial increase in data retrieval speed and UI responsiveness.<br><br>
-               
-               
-                    <span class="bold-text">School Management Systems (CTF):</span> Developed an automated academic evaluation engine. This system allows schools to generate multi-dimensional student performance reports (annual/term-wise) instantly, significantly reducing the administrative workload for educators.<br><br>
-              
-                    <span class="bold-text">Vibe Dynamic Form Builder:</span> Created a low-code form solution for educational institutions. It features a drag-and-drop interface that maps form submissions directly to internal database schemas, automating the student enrollment and data entry pipeline.<br><br>
-              
-            </ul>
-        </div>
-    </section>
+    <div class="edu-item">
+      <div class="edu-left">
+        <div class="edu-degree">Secondary Education (SEE)</div>
+        <div class="edu-school">Shree Shiva Secondary School, Kawasoti, Nawalpur</div>
+      </div>
+      <span class="edu-date">2013 — 2020</span>
+    </div>
+  </div>
 
-    <section>
-        <h2>Relevant Projects</h2>
-        
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Redpanda Hotel And Lodge</span>
-                <span class="proj-link"><a href="https://pandanest.vercel.app/">View Project</a></span>
-            </div>
-         Developed a specialized hospitality platform focusing on seamless room reservations and inventory management. Integrated a custom checkout flow designed for the local market and optimized for mobile performance.
-        </div>
-
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Dynamic CV Maker</span>
-                <span class="proj-link"><a href="https://cv.dhakalkiran.com.np/">View Project</a></span>
-            </div>
-            A utility application designed to help job seekers generate ATS-friendly resumes. Built with a focus on real-time data persistence and dynamic styling using React State Management.
-        </div>
-
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Project Management Software (on progress)</span>
-                <span class="proj-link"><a href="https://pms.dhakalkiran.com.np/">View Project</a></span>
-            </div>
-          Designed a collaborative SaaS tool for dev teams to track sprints and issues. Implemented role-based access control (RBAC) and real-time status updates to facilitate agile workflows.
-        </div>
-
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Food Delivery</span>
-                <span class="proj-link"><a href="https://fooddelivery-ten-ebon.vercel.app/">View Project</a></span>
-             
-            </div>
-           Built an intelligent shopping platform that utilizes collaborative filtering algorithms. The system analyzes user interaction patterns to provide personalized product suggestions, enhancing user engagement and conversion rates.
-        </div>
-    </section>
-
-   
-
-  <section>
-
-        <h2>Education</h2>
-
-        <div class="experience-item">
-
-            <div class="exp-header">
-
-                <span class="job-title">Bachelor in Computer Engineering</span>
-
-                <span class="exp-date">2020 –2025</span>
-
-            </div>
-
-            <p>Gandaki College of Engineering and Science, Lamachaur, Pokhara</p>
-
-        </div>
-
-        <div class="experience-item">
-
-            <div class="exp-header">
-
-                <span class="job-title">Secondary Education</span>
-
-                <span class="exp-date">2013 – 2020</span>
-
-            </div>
-
-            <p>Shree Shiva Secondary School, Kawasoti, Nawalpur</p>
-
-        </div>
-
-    </section>
-<section>
-<h2>Additional</h2>
-
-        <p><span class="bold-text">Languages:</span> English (Professional), Nepali (Native), Hindi (Professional)</p>
-
-        <p><span class="bold-text">Interests:</span> Strategic Chess, Table Tennis,Cricket, Open Source Development, Emerging Web Technologies.</p>
-
-    </section>
+  <!-- ADDITIONAL -->
+  <div class="section">
+    <div class="section-title">Additional</div>
+    <p class="add-line"><strong>Languages:</strong> English (Professional) &nbsp;·&nbsp; Nepali (Native) &nbsp;·&nbsp; Hindi (Professional)</p>
+    <p class="add-line"><strong>Interests:</strong> Chess, Table Tennis, Cricket, Open Source Development, Emerging Web Technologies</p>
+  </div>
 
 </div>
-</div>
-
 </body>
 </html>
