@@ -3,327 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Dhakal - Web Developer</title>
+    <title>Kiran Dhakal - Full-Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
         :root {
-            --primary-black: #000000;    /* Solid Black for Titles */
-            --accent-blue: #2563eb;      /* Professional Blue */
-            --text-main: #334155;        /* Soft Charcoal */
-            --text-heading: #0f172a;     /* Dark Slate */
-            --line-color: #cbd5e1;       /* Refined Gray */
+            --black: #0a0a0a;
+            --blue: #1d4ed8;
+            /* --blue-light: #3b82f6; */
+            --slate: #334155;
+            --muted: #64748b;
+            --line: #040404;
+            --bg: #f8fafc;
+            --white: #ffffff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f1f5f9;
-            color: var(--text-main);
-            line-height: 1.5;
-            padding: 20px 0;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--black);
+            line-height: 1.6;
+            /* padding:4px 0; */
+            font-size: 13.5px;
         }
 
-        .cv-container {
-            max-width: 850px;
+        .cv {
+            max-width: 860px;
             margin: 0 auto;
-            background: #fff;
-            padding: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
+            background: var(--white);
+            box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 8px 32px rgba(0,0,0,.06);
+            border-radius: 6px;
+            overflow: hidden;
         }
 
+        /* ── HEADER ── */
         header {
-            border-bottom: 3px solid var(--primary-black);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            /* padding: 36px 42px 28px; */
+            padding: 6px 42px 28px;
+            border-bottom: 2px solid var(--black);
+            position: relative;
         }
 
         h1 {
-            font-size: 34px;
-            font-weight: 700;
-            color: var(--primary-black);
-            letter-spacing: -0.03em;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            color: var(--accent-blue);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 15px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 13px;
-            color: var(--text-main);
-        }
-
-        .contact-info a {
-            color: var(--text-main);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: all 0.2s;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-blue);
-            border-bottom: 1px solid var(--accent-blue);
-        }
-
-        h2 {
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--primary-black);
-            margin: 30px 0 15px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        h2::after {
-            content: "";
-            flex: 1;
-            height: 2px;
-            background: var(--primary-black);
-            margin-left: 15px;
-        }
-
-        .experience-item, .project-item {
-            margin-bottom: 22px;
-        }
-
-        .exp-header, .proj-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            font-family: 'DM Serif Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: var(--black);
+            letter-spacing: -0.02em;
+            line-height: 1;
             margin-bottom: 6px;
         }
 
-        .job-title, .project-title {
+        .subtitle {
+            font-size: 11.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--blue);
+            margin-bottom: 18px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 4px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--slate);
+            align-items: center;
+        }
+
+        .contact-row .sep {
+            color: var(--line);
             font-size: 16px;
-            font-weight: 700;
-            color: var(--text-heading);
+            line-height: 1;
+            margin: 0 2px;
         }
 
-        .exp-date, .proj-link {
-            font-size: 12px;
-            font-weight: 700;
-            color: #64748b;
-        }
-
-        .proj-link a {
-            color: var(--accent-blue);
+        .contact-row a {
+            color: var(--slate);
             text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color .2s, border-color .2s;
+        }
+        .contact-row a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+
+        /* ── BODY ── */
+        .body { padding:0 32px 36px;}
+
+        /* ── SECTION HEADING ── */
+        h2 {
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--black);
+            margin: 32px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1.5px;
+            background: var(--black);
         }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            font-size: 14.5px;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
+        /* ── SUMMARY ── */
+        .summary {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--slate);
             text-align: justify;
         }
 
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-            font-weight: bold;
-        }
-
-        .bold-text {
-            font-weight: 600;
-            color: var(--primary-black);
-        }
-
+        /* ── SKILLS ── */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            font-size: 14px;
-            color: var(--primary-black);
+            gap: 7px 24px;
         }
+        .skill-row { font-size: 13.5px; color: var(--black); }
+        .skill-label { font-weight: 700; color: var(--black); margin-right: 4px; }
+
+        /* ── EXPERIENCE ── */
+        .exp-block { margin-bottom: 28px; }
+
+        .exp-company-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        .exp-company {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--blue);
+            letter-spacing: -0.01em;
+        }
+        .exp-duration {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--muted);
+            background: #f1f5f9;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 2px 10px;
+            white-space: nowrap;
+        }
+
+        /* ── PROJECT CARDS inside experience ── */
+        .proj-card {
+            background: #f8fafc;
+            /* border: 1px solid var(--line);
+            border-left: 3px solid var(--blue-light);
+            border-radius: 4px; */
+            padding: 12px 16px;
+            margin-bottom: 10px;
+        }
+        .proj-card-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .proj-card-desc {
+            font-size: 15px;
+            color: var(--slate);
+            line-height: 1.65;
+            text-align: justify;
+        }
+
+        /* ── RELEVANT PROJECTS ── */
+        .rel-proj-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .rel-proj-card {
+            /* border: 1px solid var(--line); */
+            /* border-radius: 5px; */
+            padding: 14px 16px;
+        }
+        .rel-proj-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 8px;
+           
+        }
+        .rel-proj-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1.3;
+        }
+        .rel-proj-link a {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--blue);
+            text-decoration: none;
+            white-space: nowrap;
+            border-bottom: 1px solid transparent;
+            transition: border-color .2s;
+        }
+        .rel-proj-link a:hover { border-bottom-color: var(--blue); }
+        .rel-proj-desc {
+            font-size: 15px;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        /* ── EDUCATION ── */
+        .edu-item { margin-bottom: 16px; }
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        .edu-degree {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--black);
+        }
+        .edu-date {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--muted);
+            background: #f1f5f9;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 2px 10px;
+        }
+        .edu-school { font-size: 13px; color: var(--slate); }
+
+        /* ── ADDITIONAL ── */
+        .additional-row { font-size: 13.5px; color: var(--slate); margin-bottom: 5px; }
+        .bold { font-weight: 700; color: var(--black); margin-right: 4px; }
 
         @media print {
             body { background: none; padding: 0; }
-            .cv-container { box-shadow: none; border-radius: 0; width: 100%; padding: 0; }
+            .cv { box-shadow: none; border-radius: 0; }
         }
     </style>
 </head>
 <body>
 
-<div class="cv-container">
+<div class="cv">
+
     <header>
         <h1>Kiran Dhakal</h1>
         <div class="subtitle">Full-Stack Developer</div>
-        <div class="contact-info">
+        <div class="contact-row">
             <span>Kathmandu, Nepal</span>
+            <span class="sep">|</span>
             <a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a>
+            <span class="sep">|</span>
             <a href="https://dhakalkiran.com.np">dhakalkiran.com.np</a>
+            <span class="sep">|</span>
             <a href="https://linkedin.com/in/kirandhakal7">linkedin.com/in/kirandhakal7</a>
         </div>
     </header>
-<section>
 
+    <div class="body">
+
+        <!-- SUMMARY -->
         <h2>Professional Summary</h2>
-
-        <p>
-
-            Results-driven Web Developer with specialized foundations in React.js and Node.js. 
-
-            Proven track record during professional internships of optimizing system performance and 
-
-            translating complex Figma designs into interactive, user-centric interfaces. 
-
-            Expertise lies in creating automated workflows and scalable data systems for international education and eCommerce platforms.
-
+        <p class="summary">
+            Results-driven Full-Stack Developer with specialized expertise in React.js and Node.js ecosystems. 
+            I have a proven track record of optimizing system performance and translating complex Figma designs 
+            into interactive, user-centric interfaces. My expertise spans automated workflows, scalable data 
+            systems, and SaaS product development — with hands-on experience delivering production-grade 
+            solutions for international education, eCommerce, and municipal governance platforms.
         </p>
 
-    </section>
-
-
-
-    <section>
-
+        <!-- SKILLS -->
         <h2>Core Expertise</h2>
-
         <div class="skills-grid">
-
-            <div><span class="skill-category">Languages:</span> JavaScript, TypeScript, PHP, Python</div>
-
-            <div><span class="skill-category">Frontend:</span> React.js, Next.js, Tailwind CSS</div>
-
-            <div><span class="skill-category">Backend:</span> Node.js, GraphQL, REST APIs, MySQL, PostgreSQL , react query</div>
-
-            <div><span class="skill-category">Tools:</span> Git, Docker, DigitalOcean,n8n Figma, Google Colab , Google cloud</div>
-
+            <div class="skill-row"><span class="skill-label">Languages:</span> JavaScript, TypeScript, PHP, Python</div>
+            <div class="skill-row"><span class="skill-label">Frontend:</span> React.js, Next.js, Tailwind CSS</div>
+            <div class="skill-row"><span class="skill-label">Backend:</span> Node.js, GraphQL, REST APIs, MySQL, PostgreSQL, React Query</div>
+            <div class="skill-row"><span class="skill-label">Tools:</span> Git, Docker, DigitalOcean, n8n, Figma, Google Colab, Google Cloud</div>
         </div>
 
-    </section>
-    <section>
+        <!-- EXPERIENCE -->
         <h2>Professional Experience</h2>
-        
-        <div class="experience-item">
-            <div class="exp-header">
-                <span class="job-title">Software Engineer</span>
-                <span class="exp-date">NOV 2025 – PRESENT</span>
-            </div>
-            <ul>
-               
-                    <span class="bold-text">Hello Palika (Municipal SaaS):</span> Engineered a comprehensive "Local Government-to-Citizen" platform. Built tools for real-time publishing of municipal news and notices, and an executive dashboard for Mayors and CAOs to manage official activities. The system serves as a central hub for legislative acts and digitizes previously manual paper-based filing systems.<br><br>
-              
-                    <span class="bold-text">Chuiurika eCommerce Platform:</span> Led the frontend reconstruction using React and Tailwind CSS to match high-fidelity Figma designs. Spearheaded a massive debugging phase that resolved over a dozen critical backend bottlenecks and refactored GraphQL queries to achieve a substantial increase in data retrieval speed and UI responsiveness.<br><br>
-               
-               
-                    <span class="bold-text">School Management Systems (CTF):</span> Developed an automated academic evaluation engine. This system allows schools to generate multi-dimensional student performance reports (annual/term-wise) instantly, significantly reducing the administrative workload for educators.<br><br>
-              
-                    <span class="bold-text">Vibe Dynamic Form Builder:</span> Created a low-code form solution for educational institutions. It features a drag-and-drop interface that maps form submissions directly to internal database schemas, automating the student enrollment and data entry pipeline.<br><br>
-              
-            </ul>
-        </div>
-    </section>
 
-    <section>
-        <h2>Relevant Projects</h2>
-        
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Redpanda Hotel And Lodge</span>
-                <span class="proj-link"><a href="https://pandanest.vercel.app/">View Project</a></span>
+        <div class="exp-block">
+            <div class="exp-company-row">
+                <span class="exp-company">Information Care Pvt. Ltd.</span>
+                <span class="exp-duration">Nov 2025 – Present</span>
             </div>
-         Developed a specialized hospitality platform focusing on seamless room reservations and inventory management. Integrated a custom checkout flow designed for the local market and optimized for mobile performance.
-        </div>
 
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Dynamic CV Maker</span>
-                <span class="proj-link"><a href="https://cv.dhakalkiran.com.np/">View Project</a></span>
+            <div class="proj-card">
+                <div class="proj-card-title">Hello Palika — Municipal SaaS Platform</div>
+                <div class="proj-card-desc">
+                    I engineered a comprehensive "Local Government-to-Citizen" platform that serves as a central digital hub for municipal operations. I built real-time tools for publishing official news and notices, and developed an executive dashboard enabling Mayors and CAOs to manage and track their official activities. The system also digitizes previously manual, paper-based filing workflows for legislative acts and public records.
+                </div>
             </div>
-            A utility application designed to help job seekers generate ATS-friendly resumes. Built with a focus on real-time data persistence and dynamic styling using React State Management.
-        </div>
 
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Project Management Software (on progress)</span>
-                <span class="proj-link"><a href="https://pms.dhakalkiran.com.np/">View Project</a></span>
+            <div class="proj-card">
+                <div class="proj-card-title">Chuiurika — eCommerce Platform Reconstruction</div>
+                <div class="proj-card-desc">
+                    I led the full frontend reconstruction of the platform using React and Tailwind CSS, faithfully implementing high-fidelity Figma designs. I spearheaded an extensive debugging phase that resolved over a dozen critical backend bottlenecks and refactored GraphQL queries, achieving a substantial increase in data retrieval speed and overall UI responsiveness.
+                </div>
             </div>
-          Designed a collaborative SaaS tool for dev teams to track sprints and issues. Implemented role-based access control (RBAC) and real-time status updates to facilitate agile workflows.
+
+            <div class="proj-card">
+                <div class="proj-card-title">CTF School Management System — Academic Evaluation Engine</div>
+                <div class="proj-card-desc">
+                    I developed an automated academic evaluation engine that enables schools to instantly generate multi-dimensional student performance reports on both annual and term-wise bases. The system significantly reduces administrative workload for educators by replacing manual report compilation with a fully automated, configurable pipeline.
+                </div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-card-title">Vibe — Dynamic Low-Code Form Builder</div>
+                <div class="proj-card-desc">
+                    I created a low-code form solution purpose-built for educational institutions. The tool features a drag-and-drop interface that maps form submissions directly to internal database schemas, fully automating the student enrollment and data entry pipeline and eliminating manual record-keeping.
+                </div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-card-title">Information Care — Company Website Redesign</div>
+                <div class="proj-card-desc">
+                    I led a full redesign of the Information Care corporate website, migrating the codebase to React and overhauling the UI/UX from the ground up. I introduced a modern, conversion-focused layout with improved service presentation, streamlined navigation, and responsive design — significantly elevating the company's digital presence and brand identity.
+                </div>
+            </div>
         </div>
 
-        <div class="project-item">
-            <div class="proj-header">
-                <span class="project-title">Food Delivery</span>
-                <span class="proj-link"><a href="https://fooddelivery-ten-ebon.vercel.app/">View Project</a></span>
-             
+        <!-- RELEVANT PROJECTS -->
+        <h2 style="margin-top: 36px; padding-top: 4px;">Relevant Projects</h2>
+
+        <div class="rel-proj-grid">
+            <div class="rel-proj-card">
+                <div class="rel-proj-header">
+                    <span class="rel-proj-title">Redpanda Hotel &amp; Lodge</span>
+                    <span class="rel-proj-link"><a href="https://pandanest.vercel.app/" target="_blank">View Project ↗</a></span>
+                </div>
+                <div class="rel-proj-desc">
+                    A specialized hospitality platform with seamless room reservation and inventory management. I integrated a custom checkout flow designed for the local market and optimized the entire experience for mobile performance.
+                </div>
             </div>
-           Built an intelligent shopping platform that utilizes collaborative filtering algorithms. The system analyzes user interaction patterns to provide personalized product suggestions, enhancing user engagement and conversion rates.
+
+            <div class="rel-proj-card">
+                <div class="rel-proj-header">
+                    <span class="rel-proj-title">Dynamic CV Maker</span>
+                    <span class="rel-proj-link"><a href="https://cv.dhakalkiran.com.np/" target="_blank">View Project ↗</a></span>
+                </div>
+                <div class="rel-proj-desc">
+                    A utility application helping job seekers generate ATS-friendly resumes with real-time preview. I built it with a focus on real-time data persistence and dynamic styling using React State Management.
+                </div>
+            </div>
+
+            <div class="rel-proj-card">
+                <div class="rel-proj-header">
+                    <span class="rel-proj-title">Project Management Software <em style="font-size:10px;font-style:normal;color:var(--muted);">(In Progress)</em></span>
+                    <span class="rel-proj-link"><a href="https://pms.dhakalkiran.com.np/" target="_blank">View Project ↗</a></span>
+                </div>
+                <div class="rel-proj-desc">
+                    A collaborative SaaS tool for dev teams to track sprints and issues. I implemented role-based access control (RBAC) and real-time status updates to facilitate agile workflows across distributed teams.
+                </div>
+            </div>
+
+            <div class="rel-proj-card">
+                <div class="rel-proj-header">
+                    <span class="rel-proj-title">Food Delivery Platform</span>
+                    <span class="rel-proj-link"><a href="https://fooddelivery-ten-ebon.vercel.app/" target="_blank">View Project ↗</a></span>
+                </div>
+                <div class="rel-proj-desc">
+                    An intelligent food ordering platform using collaborative filtering algorithms to analyze user interaction patterns and deliver personalized product suggestions, enhancing engagement and conversion rates.
+                </div>
+            </div>
         </div>
-    </section>
 
-   
-
-  <section>
-
+        <!-- EDUCATION -->
         <h2>Education</h2>
 
-        <div class="experience-item">
-
-            <div class="exp-header">
-
-                <span class="job-title">Bachelor in Computer Engineering</span>
-
-                <span class="exp-date">2020 –2025</span>
-
+        <div class="edu-item">
+            <div class="edu-row">
+                <span class="edu-degree">Bachelor of Computer Engineering</span>
+                <span class="edu-date">2020 – 2025</span>
             </div>
-
-            <p>Gandaki College of Engineering and Science, Lamachaur, Pokhara</p>
-
+            <div class="edu-school">Gandaki College of Engineering and Science, Lamachaur, Pokhara</div>
         </div>
 
-        <div class="experience-item">
-
-            <div class="exp-header">
-
-                <span class="job-title">Secondary Education</span>
-
-                <span class="exp-date">2013 – 2020</span>
-
+        <div class="edu-item">
+            <div class="edu-row">
+                <span class="edu-degree">Secondary Education (SEE)</span>
+                <span class="edu-date">2013 – 2020</span>
             </div>
-
-            <p>Shree Shiva Secondary School, Kawasoti, Nawalpur</p>
-
+            <div class="edu-school">Shree Shiva Secondary School, Kawasoti, Nawalpur</div>
         </div>
 
-    </section>
-<section>
-<h2>Additional</h2>
+        <!-- ADDITIONAL -->
+        <h2>Additional</h2>
+        <div class="additional-row"><span class="bold">Languages:</span> English (Professional), Nepali (Native), Hindi (Professional)</div>
+        <div class="additional-row"><span class="bold">Interests:</span> Strategic Chess, Table Tennis, Cricket, Open Source Development, Emerging Web Technologies</div>
 
-        <p><span class="bold-text">Languages:</span> English (Professional), Nepali (Native), Hindi (Professional)</p>
-
-        <p><span class="bold-text">Interests:</span> Strategic Chess, Table Tennis,Cricket, Open Source Development, Emerging Web Technologies.</p>
-
-    </section>
-
-</div>
-</div>
+    </div><!-- /.body -->
+</div><!-- /.cv -->
 
 </body>
 </html>
