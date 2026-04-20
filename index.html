@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiran Dhakal - Full-Stack Developer</title>
+    <title>Kiran Dhakal - Full Stack Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <style>
         :root {
             --black: #0a0a0a;
             --blue: #1d4ed8;
-            /* --blue-light: #3b82f6; */
             --slate: #334155;
             --muted: #64748b;
             --line: #040404;
@@ -24,23 +23,20 @@
             background: var(--bg);
             color: var(--black);
             line-height: 1.6;
-            /* padding:4px 0; */
             font-size: 13.5px;
         }
 
         .cv {
             max-width: 860px;
-            margin: 0 auto;
+            margin: 20px auto;
             background: var(--white);
             box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 8px 32px rgba(0,0,0,.06);
             border-radius: 6px;
             overflow: hidden;
         }
 
-        /* ── HEADER ── */
         header {
-            /* padding: 36px 42px 28px; */
-            padding: 6px 42px 28px;
+            padding: 40px 42px 28px;
             border-bottom: 2px solid var(--black);
             position: relative;
         }
@@ -89,10 +85,8 @@
         }
         .contact-row a:hover { color: var(--blue); border-bottom-color: var(--blue); }
 
-        /* ── BODY ── */
-        .body { padding:0 32px 36px;}
+        .body { padding: 0 42px 40px; }
 
-        /* ── SECTION HEADING ── */
         h2 {
             font-size: 10.5px;
             font-weight: 700;
@@ -111,34 +105,31 @@
             background: var(--black);
         }
 
-        /* ── SUMMARY ── */
         .summary {
-            font-size: 14px;
+            font-size: 14.5px;
             line-height: 1.7;
             color: var(--slate);
             text-align: justify;
         }
 
-        /* ── SKILLS ── */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 7px 24px;
+            gap: 10px 24px;
         }
         .skill-row { font-size: 13.5px; color: var(--black); }
         .skill-label { font-weight: 700; color: var(--black); margin-right: 4px; }
 
-        /* ── EXPERIENCE ── */
         .exp-block { margin-bottom: 28px; }
 
         .exp-company-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 4px;
+            margin-bottom: 12px;
         }
         .exp-company {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
             color: var(--blue);
             letter-spacing: -0.01em;
@@ -148,78 +139,83 @@
             font-weight: 600;
             color: var(--muted);
             background: #f1f5f9;
-            border: 1px solid var(--line);
+            border: 1px solid #e2e8f0;
             border-radius: 20px;
             padding: 2px 10px;
             white-space: nowrap;
         }
 
-        /* ── PROJECT CARDS inside experience ── */
         .proj-card {
-            background: #f8fafc;
-            /* border: 1px solid var(--line);
-            border-left: 3px solid var(--blue-light);
-            border-radius: 4px; */
-            padding: 12px 16px;
-            margin-bottom: 10px;
+            padding: 0 0 18px 0;
+            margin-bottom: 18px;
+            border-bottom: 1px dashed #e2e8f0;
         }
+        .proj-card:last-child { border-bottom: none; }
+
         .proj-card-title {
-            font-size: 13.5px;
+            font-size: 14px;
             font-weight: 700;
             color: var(--black);
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .proj-card-desc {
-            font-size: 15px;
-            color: var(--slate);
-            line-height: 1.65;
-            text-align: justify;
+        .proj-card-title a {
+            font-size: 11px;
+            color: var(--blue);
+            text-decoration: none;
+            text-transform: none;
+            letter-spacing: 0;
         }
 
-        /* ── RELEVANT PROJECTS ── */
+        .proj-card-desc {
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }
+        .proj-tech {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
         .rel-proj-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 16px;
         }
         .rel-proj-card {
-            /* border: 1px solid var(--line); */
-            /* border-radius: 5px; */
-            padding: 14px 16px;
+            padding: 14px;
+            background: #fcfcfc;
+            border: 1px solid #f1f5f9;
+            border-radius: 4px;
         }
         .rel-proj-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 8px;
-            gap: 8px;
-           
         }
         .rel-proj-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--black);
-            line-height: 1.3;
         }
         .rel-proj-link a {
             font-size: 11px;
             font-weight: 600;
             color: var(--blue);
             text-decoration: none;
-            white-space: nowrap;
-            border-bottom: 1px solid transparent;
-            transition: border-color .2s;
-        }
-        .rel-proj-link a:hover { border-bottom-color: var(--blue); }
-        .rel-proj-desc {
-            font-size: 15px;
-            color: var(--slate);
-            line-height: 1.6;
         }
 
-        /* ── EDUCATION ── */
+        .rel-proj-desc {
+            font-size: 13.5px;
+            color: var(--slate);
+            line-height: 1.5;
+        }
+
         .edu-item { margin-bottom: 16px; }
         .edu-row {
             display: flex;
@@ -227,187 +223,165 @@
             align-items: baseline;
             margin-bottom: 2px;
         }
-        .edu-degree {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--black);
-        }
+        .edu-degree { font-size: 14px; font-weight: 700; color: var(--black); }
         .edu-date {
-            font-size: 11.5px;
+            font-size: 11px;
             font-weight: 600;
             color: var(--muted);
-            background: #f1f5f9;
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 2px 10px;
         }
         .edu-school { font-size: 13px; color: var(--slate); }
 
-        /* ── ADDITIONAL ── */
         .additional-row { font-size: 13.5px; color: var(--slate); margin-bottom: 5px; }
         .bold { font-weight: 700; color: var(--black); margin-right: 4px; }
 
         @media print {
             body { background: none; padding: 0; }
-            .cv { box-shadow: none; border-radius: 0; }
+            .cv { box-shadow: none; border-radius: 0; margin: 0; max-width: 100%; }
+            .exp-duration { background: none; border: 1px solid #ccc; }
+            .proj-card { page-break-inside: avoid; break-inside: avoid; }
+            .rel-proj-card { page-break-inside: avoid; break-inside: avoid; }
         }
     </style>
 </head>
 <body>
 
 <div class="cv">
-
     <header>
         <h1>Kiran Dhakal</h1>
-        <div class="subtitle">Full-Stack Developer</div>
+        <div class="subtitle">Full Stack Engineer</div>
         <div class="contact-row">
             <span>Kathmandu, Nepal</span>
             <span class="sep">|</span>
             <a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a>
             <span class="sep">|</span>
-            <a href="https://dhakalkiran.com.np">dhakalkiran.com.np</a>
+            <a href="https://dhakalkiran.com.np" target="_blank">dhakalkiran.com.np</a>
             <span class="sep">|</span>
-            <a href="https://linkedin.com/in/kirandhakal7">linkedin.com/in/kirandhakal7</a>
+            <a href="https://linkedin.com/in/kirandhakal7" target="_blank">linkedin.com/in/kirandhakal7</a>
         </div>
     </header>
 
     <div class="body">
-
-        <!-- SUMMARY -->
         <h2>Professional Summary</h2>
         <p class="summary">
-            Results-driven Full-Stack Developer with specialized expertise in React.js and Node.js ecosystems. 
-            I have a proven track record of optimizing system performance and translating complex Figma designs 
-            into interactive, user-centric interfaces. My expertise spans automated workflows, scalable data 
-            systems, and SaaS product development — with hands-on experience delivering production-grade 
-            solutions for international education, eCommerce, and municipal governance platforms.
+            Computer Engineer with 2 years of experience specializing in full stack architecture and applied AI. Expert in building scalable digital ecosystems using the MERN stack, Next.js, and PostgreSQL. Proven track record in digitizing government workflows, reconstructing eCommerce platforms for performance, and automating academic evaluation systems. Focused on clean code, system performance, and developing AI-integrated solutions that solve real-world operational bottlenecks.
         </p>
 
-        <!-- SKILLS -->
         <h2>Core Expertise</h2>
         <div class="skills-grid">
-            <div class="skill-row"><span class="skill-label">Languages:</span> JavaScript, TypeScript, PHP, Python</div>
-            <div class="skill-row"><span class="skill-label">Frontend:</span> React.js, Next.js, Tailwind CSS</div>
-            <div class="skill-row"><span class="skill-label">Backend:</span> Node.js, GraphQL, REST APIs, MySQL, PostgreSQL, React Query</div>
-            <div class="skill-row"><span class="skill-label">Tools:</span> Git, Docker, DigitalOcean, n8n, Figma, Google Colab, Google Cloud</div>
+            <div class="skill-row"><span class="skill-label">Languages:</span> JavaScript, TypeScript, Python, SQL</div>
+            <div class="skill-row"><span class="skill-label">Frontend:</span> React.js, Next.js, Tailwind CSS, Redux</div>
+            <div class="skill-row"><span class="skill-label">Backend:</span> Node.js, GraphQL, REST APIs, PostgreSQL, MongoDB</div>
+            <div class="skill-row"><span class="skill-label">Tools:</span> Docker, Git, n8n, DigitalOcean, Linux (Ubuntu), Figma</div>
         </div>
 
-        <!-- EXPERIENCE -->
         <h2>Professional Experience</h2>
-
         <div class="exp-block">
             <div class="exp-company-row">
                 <span class="exp-company">Information Care Pvt. Ltd.</span>
-                <span class="exp-duration">Nov 2025 – Present</span>
+                <span class="exp-duration">2025 – Present</span>
             </div>
 
             <div class="proj-card">
-                <div class="proj-card-title">Hello Palika — Municipal SaaS Platform</div>
-                <div class="proj-card-desc">
-                    I engineered a comprehensive "Local Government-to-Citizen" platform that serves as a central digital hub for municipal operations. I built real-time tools for publishing official news and notices, and developed an executive dashboard enabling Mayors and CAOs to manage and track their official activities. The system also digitizes previously manual, paper-based filing workflows for legislative acts and public records.
+                <div class="proj-card-title">
+                    Hello Palika — Municipal SaaS Platform
+                    <a href="https://hellopalika.cliffbyte.com/" target="_blank">View Live ↗</a>
                 </div>
+                <div class="proj-card-desc">
+                    Engineered a central digital hub for municipal operations, featuring real-time tools for official news publishing and an executive dashboard for tracking official activities. Successfully digitized manual, paper-based filing workflows for legislative records.
+                </div>
+                <div class="proj-tech">Tech: React, Next.js, Node.js, PostgreSQL</div>
             </div>
 
             <div class="proj-card">
-                <div class="proj-card-title">Chuiurika — eCommerce Platform Reconstruction</div>
-                <div class="proj-card-desc">
-                    I led the full frontend reconstruction of the platform using React and Tailwind CSS, faithfully implementing high-fidelity Figma designs. I spearheaded an extensive debugging phase that resolved over a dozen critical backend bottlenecks and refactored GraphQL queries, achieving a substantial increase in data retrieval speed and overall UI responsiveness.
+                <div class="proj-card-title">Vibe College
+                    <a href="https://www.vibecollege.edu.au/" target="_blank">View Live ↗</a>
                 </div>
+                <div class="proj-card-desc">
+                    Developed a purpose-built low-code solution for educational institutions. Created a drag-and-drop interface that maps form submissions directly to database schemas, fully automating student enrollment pipelines.
+                </div>
+                <div class="proj-tech">Tech: React, Tailwind CSS, REST APIs</div>
             </div>
 
             <div class="proj-card">
-                <div class="proj-card-title">CTF School Management System — Academic Evaluation Engine</div>
-                <div class="proj-card-desc">
-                    I developed an automated academic evaluation engine that enables schools to instantly generate multi-dimensional student performance reports on both annual and term-wise bases. The system significantly reduces administrative workload for educators by replacing manual report compilation with a fully automated, configurable pipeline.
+                <div class="proj-card-title">CTF School Management System
+                    <a href="https://ctfnepal.com/" target="_blank">View Live ↗</a>
                 </div>
+                <div class="proj-card-desc">
+                    Built an automated academic evaluation engine that generates multi-dimensional student performance reports. Replaced manual report compilation with a configurable pipeline, significantly reducing administrative overhead.
+                </div>
+                <div class="proj-tech">Tech: MongoDB, Express, React, Node.js</div>
             </div>
 
             <div class="proj-card">
-                <div class="proj-card-title">Vibe — Dynamic Low-Code Form Builder</div>
-                <div class="proj-card-desc">
-                    I created a low-code form solution purpose-built for educational institutions. The tool features a drag-and-drop interface that maps form submissions directly to internal database schemas, fully automating the student enrollment and data entry pipeline and eliminating manual record-keeping.
+                <div class="proj-card-title">Churika eCommerce 
+                    <a href="https://chiurika.com/" target="_blank">View Live ↗</a>
                 </div>
+                <div class="proj-card-desc">
+                    Led the frontend reconstruction from Figma designs. Spearheaded a debugging phase that resolved critical backend bottlenecks and refactored GraphQL queries to substantially increase data retrieval speeds.
+                </div>
+                <div class="proj-tech">Tech: React, Tailwind CSS, GraphQL, Apollo Client</div>
             </div>
 
             <div class="proj-card">
-                <div class="proj-card-title">Information Care — Company Website Redesign</div>
-                <div class="proj-card-desc">
-                    I led a full redesign of the Information Care corporate website, migrating the codebase to React and overhauling the UI/UX from the ground up. I introduced a modern, conversion-focused layout with improved service presentation, streamlined navigation, and responsive design — significantly elevating the company's digital presence and brand identity.
+                <div class="proj-card-title">Information Care — Corporate Website Redesign
+                    <a href="https://infocarenepal.com/" target="_blank">View Live ↗</a>
                 </div>
+                <div class="proj-card-desc">
+                    Migrated the legacy codebase to React and overhauled the UX/UI. Introduced a conversion-focused layout with improved navigation and responsive design to elevate the brand's digital identity.
+                </div>
+                <div class="proj-tech">Tech: React, Framer Motion, CSS Modules</div>
             </div>
         </div>
 
-        <!-- RELEVANT PROJECTS -->
-        <h2 style="margin-top: 36px; padding-top: 4px;">Relevant Projects</h2>
-
+        <h2>Relevant Projects</h2>
         <div class="rel-proj-grid">
             <div class="rel-proj-card">
                 <div class="rel-proj-header">
-                    <span class="rel-proj-title">Redpanda Hotel &amp; Lodge</span>
-                    <span class="rel-proj-link"><a href="https://pandanest.vercel.app/" target="_blank">View Project ↗</a></span>
+                    <span class="rel-proj-title">Redpanda Hotel</span>
+                    <span class="rel-proj-link"><a href="https://pandanest.vercel.app/" target="_blank">Link ↗</a></span>
                 </div>
-                <div class="rel-proj-desc">
-                    A specialized hospitality platform with seamless room reservation and inventory management. I integrated a custom checkout flow designed for the local market and optimized the entire experience for mobile performance.
-                </div>
+                <div class="rel-proj-desc">Specialized hospitality platform with room reservation and custom checkout flows for the local market.</div>
             </div>
 
             <div class="rel-proj-card">
                 <div class="rel-proj-header">
                     <span class="rel-proj-title">Dynamic CV Maker</span>
-                    <span class="rel-proj-link"><a href="https://cv.dhakalkiran.com.np/" target="_blank">View Project ↗</a></span>
+                    <span class="rel-proj-link"><a href="https://cv.dhakalkiran.com.np/" target="_blank">Link ↗</a></span>
                 </div>
-                <div class="rel-proj-desc">
-                    A utility application helping job seekers generate ATS-friendly resumes with real-time preview. I built it with a focus on real-time data persistence and dynamic styling using React State Management.
-                </div>
+                <div class="rel-proj-desc">ATS-friendly resume generator with real-time preview and dynamic styling via React state management.</div>
             </div>
 
             <div class="rel-proj-card">
                 <div class="rel-proj-header">
-                    <span class="rel-proj-title">Project Management Software <em style="font-size:10px;font-style:normal;color:var(--muted);">(In Progress)</em></span>
-                    <span class="rel-proj-link"><a href="https://pms.dhakalkiran.com.np/" target="_blank">View Project ↗</a></span>
+                    <span class="rel-proj-title">PMS SaaS Tool</span>
+                    <span class="rel-proj-link"><a href="https://pms.dhakalkiran.com.np/" target="_blank">Link ↗</a></span>
                 </div>
-                <div class="rel-proj-desc">
-                    A collaborative SaaS tool for dev teams to track sprints and issues. I implemented role-based access control (RBAC) and real-time status updates to facilitate agile workflows across distributed teams.
-                </div>
+                <div class="rel-proj-desc">Collaborative tool for dev teams featuring RBAC and real-time sprint tracking for agile workflows.</div>
             </div>
 
             <div class="rel-proj-card">
                 <div class="rel-proj-header">
-                    <span class="rel-proj-title">Food Delivery Platform</span>
-                    <span class="rel-proj-link"><a href="https://fooddelivery-ten-ebon.vercel.app/" target="_blank">View Project ↗</a></span>
+                    <span class="rel-proj-title">Food Delivery AI</span>
+                    <span class="rel-proj-link"><a href="https://fooddelivery-ten-ebon.vercel.app/" target="_blank">Link ↗</a></span>
                 </div>
-                <div class="rel-proj-desc">
-                    An intelligent food ordering platform using collaborative filtering algorithms to analyze user interaction patterns and deliver personalized product suggestions, enhancing engagement and conversion rates.
-                </div>
+                <div class="rel-proj-desc">Ordering platform using collaborative filtering to deliver personalized product suggestions to users.</div>
             </div>
         </div>
 
-        <!-- EDUCATION -->
         <h2>Education</h2>
-
         <div class="edu-item">
             <div class="edu-row">
                 <span class="edu-degree">Bachelor of Computer Engineering</span>
                 <span class="edu-date">2020 – 2025</span>
             </div>
-            <div class="edu-school">Gandaki College of Engineering and Science, Lamachaur, Pokhara</div>
+            <div class="edu-school">Gandaki College of Engineering and Science, Pokhara</div>
         </div>
 
-        <div class="edu-item">
-            <div class="edu-row">
-                <span class="edu-degree">Secondary Education (SEE)</span>
-                <span class="edu-date">2013 – 2020</span>
-            </div>
-            <div class="edu-school">Shree Shiva Secondary School, Kawasoti, Nawalpur</div>
-        </div>
-
-        <!-- ADDITIONAL -->
         <h2>Additional</h2>
         <div class="additional-row"><span class="bold">Languages:</span> English (Professional), Nepali (Native), Hindi (Professional)</div>
-        <div class="additional-row"><span class="bold">Interests:</span> Strategic Chess, Table Tennis, Cricket, Open Source Development, Emerging Web Technologies</div>
-
-    </div><!-- /.body -->
-</div><!-- /.cv -->
+        <div class="additional-row"><span class="bold">Interests:</span> Strategic Chess, Open Source Development, Emerging Web Technologies</div>
+    </div>
+</div>
 
 </body>
 </html>
